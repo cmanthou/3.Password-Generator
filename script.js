@@ -24,14 +24,18 @@ var buttonPassword = function () {
     base = base.concat(uppercase);
   }
 
-  var numberspromt = confirm("Would you like to use Numbers in your password?");
-  if (numberspromt === true) {
+  var numbersprompt = confirm("Would you like to use Numbers in your password?");
+  if (numbersprompt === true) {
     base = base.concat(numbers);
   }
 
   var specialchar = confirm("Would you like to use Special Characters in your password?");
   if (specialchar === true) {
     base = base.concat(special);
+  }
+
+  if (lower === false && upper === false && numbersprompt === false && specialchar === false) {
+    alert("You must choose at least one Parameter.");
   }
 }
 
