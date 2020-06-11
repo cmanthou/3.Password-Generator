@@ -1,10 +1,10 @@
 // Assignment Code
 var Characters;
 
-var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var special = ["!", "@", "#","$", "%", "^", "&", "*", "~", "?"];
 var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+var special = ["!", "@", "#","$", "%", "^", "&", "*", "~", "?"];
 var base = [];
 
 var buttonPassword = function () {
@@ -24,17 +24,17 @@ var buttonPassword = function () {
     base = base.concat(uppercase);
   }
 
-  var numbersprompt = confirm("Would you like to use Numbers in your password?");
-  if (numbersprompt === true) {
+  var nmbrs = confirm("Would you like to use Numbers in your password?");
+  if (nmbrs === true) {
     base = base.concat(numbers);
   }
 
-  var specialchar = confirm("Would you like to use Special Characters in your password?");
-  if (specialchar === true) {
+  var splchar = confirm("Would you like to use Special Characters in your password?");
+  if (splchar === true) {
     base = base.concat(special);
   }
 
-  if (lower === false && upper === false && numbersprompt === false && specialchar === false) {
+  if (lower === false && upper === false && nmbrs === false && splchar === false) {
     alert("You must choose at least one Parameter.");
   }
 }
